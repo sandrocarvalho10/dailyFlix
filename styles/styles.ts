@@ -24,7 +24,7 @@ a {
 
 .container{
     width: 100%;
-    max-width: 95vw;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
