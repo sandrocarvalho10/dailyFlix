@@ -8,6 +8,10 @@ export const Card = () => {
       <a href="#">
         <FiPlay size={48} />
       </a>
+      <div className="legend">
+        <h4>Joken - Mudando de paradigma</h4>
+        <h6 className="small">Capitulo 1 | Temp. 2</h6>
+      </div>
     </S.Card>
   );
 };

@@ -1,5 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'https://api.dailymotion.com'
+})
 
 type Data = {
   name: string
