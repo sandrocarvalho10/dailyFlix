@@ -4,6 +4,15 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 0;
+  background: #000;
+
+  & > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 `;
 export const Logo = styled.a`
   font-size: 32px;
