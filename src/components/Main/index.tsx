@@ -8,15 +8,15 @@ export const Main = () => {
   const [playlist1, setPlaylist1] = useState([]);
 
   useEffect(() => {
-    api.get(`playlist/${playlists[0]}`).then((response) => {
-      setPlaylist1(response.data.id);
+    api.get(`playlist/x6hnrv`).then((response) => {
+      setPlaylist1(response.data);
     });
   }, []);
 
   useEffect(() => {
     console.log(playlist1);
-    api.get(`playlist/${playlist1}/videos`).then((response) => {
-      console.log(response.data);
+    api.get(`playlist/x6hnrv/videos`).then((response) => {
+      // console.log(response.data);
     });
   }, []);
 
