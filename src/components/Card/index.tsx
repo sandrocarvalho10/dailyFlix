@@ -1,16 +1,15 @@
-import Image from "next/image";
 import * as S from "./styles";
 import { FiPlay } from "react-icons/fi";
-export const Card = () => {
+export const Card = ({url, img, name, cap, temp}: any) => {
   return (
     <S.Card>
-      <Image src="/img/cover.jpg" width={200} height={270} alt="Capa Joker" />
-      <a href="#">
+      <img src={img} alt={name} />
+      <a href={url}>
         <FiPlay size={48} />
       </a>
       <div className="legend">
-        <h4>Joken - Mudando de paradigma</h4>
-        <h6 className="small">Capitulo 1 | Temp. 2</h6>
+        <h4>{name}</h4>
+        <h6 className="small">{cap } | {temp}</h6>
       </div>
     </S.Card>
   );

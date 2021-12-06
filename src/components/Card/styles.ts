@@ -10,6 +10,11 @@ export const Card = styled.div`
   color: #fff;
   opacity: 0.8;
 
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .legend {
     /* display: none; */
     position: absolute;
