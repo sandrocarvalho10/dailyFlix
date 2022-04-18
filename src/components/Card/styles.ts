@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   position: relative;
-  width: 200px;
-  height: 270px;
+  min-width: 250px;
+  max-width: 250px
+  min-height:370px
+  height: 370px;
   background: #ccc;
   transition: all 0.2s;
   transform: scale(0.8);
@@ -33,10 +35,10 @@ export const Card = styled.div`
     h6 {
       margin-top: 10px;
       font-size: 14px;
-    
+
     }
   }
-  
+
   &:hover {
     transform: scale(1);
     opacity: 1;
