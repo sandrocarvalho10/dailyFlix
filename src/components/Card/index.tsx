@@ -1,14 +1,13 @@
 import * as S from "./styles";
 import { FiPlay } from "react-icons/fi";
 import Image from 'next/image'
-import imgCover from '../../../public/img/cover.jpg'
 export const Card = ({item}: any) => {
 
   console.log(item)
   return (
     <S.Card>
-      <Image layout="responsive" src={imgCover} alt={item.title} />
-      <a href="#">
+      <Image loading="lazy" src={item.thumbnail_url} alt={item.title} layout="fill"/>
+      <a href={`/playlist/${item.owner}/video/${item.id}`}>
         <FiPlay size={48} />
       </a>
       <div className="legend">

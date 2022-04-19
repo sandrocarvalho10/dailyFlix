@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const Card = styled.div`
   position: relative;
   min-width: 250px;
-  max-width: 250px
-  min-height:370px
+  max-width: 250px;
   height: 370px;
   background: #ccc;
   transition: all 0.2s;
-  transform: scale(0.8);
+  transform: scale(0.9);
   color: #fff;
   opacity: 0.8;
+
 
   img{
     width: 100%;

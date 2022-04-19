@@ -4,10 +4,16 @@ import * as S from "./styles";
 import { useEffect, useState } from "react";
 import { List } from "../List";
 
+export interface ListProps {
+  slug: string,
+  title: string,
+  src: string,
+  items: any
 
-export const Main = () => {
+}
+export const Main: React.FC = () => {
   const playlists = ["x6hnrv"];
-  const [lista, setLista] = useState([]);
+  const [lista, setLista] = useState<ListProps | never[]>([]);
   const [playlist1, setPlaylist1] = useState([]);
 
   useEffect(() => {
