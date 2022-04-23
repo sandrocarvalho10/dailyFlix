@@ -26,7 +26,7 @@ export const List = ({ items }: any) => {
 
   const handleRightArrow = () => {
     let x = scrollX - Math.round(window.innerWidth / 2 );
-    let listW = itemsProps.list.length * 250;
+    const listW = itemsProps.list.length * 250;
     if((window.innerWidth - listW) > x){
       x = (window.innerWidth - listW) -60;
     }
