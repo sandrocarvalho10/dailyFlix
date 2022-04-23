@@ -58,7 +58,7 @@ export const List = ({ items }: any) => {
           marginLeft: scrollX,
           width: itemsProps.list.length * 250
         }}>
-        {itemsProps.list.map((item, key) => (
+        {itemsProps.list.map((item: any, key: any) => (
           <Card key={key} item={item} />
         ))}
         </S.MovieRowList>

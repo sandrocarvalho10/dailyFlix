@@ -27,10 +27,16 @@ export const Card = styled.div`
     background: #277EE6;
     border-top-right-radius: 20px;
     padding: 10px;
+    /* overflow: hidden ; */
     h4 {
       font-size: 16px;
       margin-block-end: 0;
       margin-block-start: 0;
+      height: 60%;
+      text-overflow: ellipsis; // Adicionando "..." ao final
+      display: -webkit-box;
+      -webkit-line-clamp: 2; // Quantidade de linhas
+      -webkit-box-orient: vertical;
     }
     h6 {
       margin-top: 10px;

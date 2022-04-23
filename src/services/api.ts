@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+const  token = process.env.NEXT_PUBLIC_TOKEN_API;
+axios.defaults.headers.common = {'Authorization': `bearer ${token}`};
+
 export const api = axios.create({
   baseURL: 'https://api.dailymotion.com'
 })

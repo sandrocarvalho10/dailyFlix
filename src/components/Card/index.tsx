@@ -11,7 +11,7 @@ export const Card = ({item}: any) => {
         <FiPlay size={48} />
       </a>
       <div className="legend">
-        <h4>{item.title}</h4>
+        <h4 title={item.title}>{item.title}</h4>
         <h6 className="small">{"Novelas" } | {'Gospel'}</h6>
       </div>
     </S.Card>
