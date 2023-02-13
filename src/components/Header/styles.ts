@@ -15,7 +15,7 @@ export const Header = styled.header`
 
 `;
 export const Logo = styled.a`
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: bold;
   color: #fff;
 `;
@@ -30,6 +30,7 @@ list-style: none;
 export const Link = styled.a`
     opacity: 0.7;
     color: #FFF;
+    font-size: 1.6rem;
 
     &:hover{
         opacity: 1;

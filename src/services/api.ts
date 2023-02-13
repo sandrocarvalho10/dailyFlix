@@ -1,14 +1,26 @@
 import axios from 'axios';
 
-const  token = process.env.NEXT_PUBLIC_TOKEN_API;
-axios.defaults.headers.common = {'Authorization': `bearer ${token}`};
+
+
+
 
 export const api = axios.create({
   baseURL: 'https://api.dailymotion.com'
 })
 
+const getAccessToken = async () => {
+  const res = await api.post(
+    `https://www.dailymotion.com/oauth/token?grant_type=client_credentials&client_id=${process.env.NEXT_PUBLIC_API_KEY}&&client_secret=${process.env.NEXT_PUBLIC_TOKEN_SECRET_API}`)
+
+  console.log(res.data)
+  const data = await res.data;
+  return data.access_token;
+};
 
 const basicFetch = async (endpoint:string) => {
+
+  const token = await getAccessToken();
+  axios.defaults.headers.common = {'Authorization': `bearer ${token}`};
   const req = await api.get(`${endpoint}`);
   console.log('Req ',req)
   return req;
