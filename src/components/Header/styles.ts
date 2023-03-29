@@ -1,18 +1,27 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   padding: 15px 0;
   background: #000;
 
-  & > div{
+  & > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
   }
 
+  & span {
+    font-size: 1.4rem;
+  }
 `;
 export const Logo = styled.a`
   font-size: 3.2rem;
@@ -21,18 +30,18 @@ export const Logo = styled.a`
 `;
 
 export const List = styled.ul`
-display: flex;
-align-items: center;
-gap: 20px;
-list-style: none;
-`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+`;
 
 export const Link = styled.a`
-    opacity: 0.7;
-    color: #FFF;
-    font-size: 1.6rem;
+  opacity: 0.7;
+  color: #fff;
+  font-size: 1.6rem;
 
-    &:hover{
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 `;

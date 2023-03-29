@@ -3,7 +3,6 @@ import { FiPlay } from "react-icons/fi";
 import Image from 'next/image'
 export const Card = ({item}: any) => {
 
-  console.log(item)
   return (
     <S.Card>
       <Image loading="lazy" src={item.thumbnail_url} alt={item.title} layout="fill"/>

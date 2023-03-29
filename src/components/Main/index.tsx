@@ -4,13 +4,13 @@ import * as S from "./styles";
 import { useEffect, useState } from "react";
 import { List } from "../List";
 import { AxiosResponse } from "axios";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export interface ListProps {
-  slug: string,
-  title: string,
-  src: string,
-  items: AxiosResponse<any, any> | never
-
+  slug: string;
+  title: string;
+  src: string;
+  items: AxiosResponse<any, any> | never;
 }
 export const Main: React.FC = () => {
   const playlists = ["x6hnrv"];
@@ -21,28 +21,23 @@ export const Main: React.FC = () => {
     const loadAll = async () => {
       const list = await api.getHomeList();
       setLista(list);
-    }
+    };
 
-    loadAll()
+    loadAll();
 
     // console.log(lista)
+  }, []);
 
-  }, [])
-
+  const { data: session } = useSession();
 
   return (
     <S.Main className="container">
-      {
-        lista.map((movie: any,key: any) => (
-          <S.ContainedTitle key={key}>
-            <S.Title>{movie.title}</S.Title>
-            <List items={movie.items} />
-          </S.ContainedTitle>
-
-        ))
-
-
-      }
+      {lista.map((movie: any, key: any) => (
+        <S.ContainedTitle key={key}>
+          <S.Title>{movie.title}</S.Title>
+          <List items={movie.items} />
+        </S.ContainedTitle>
+      ))}
     </S.Main>
   );
 };

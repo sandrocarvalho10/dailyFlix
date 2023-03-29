@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { Header } from '../components/Header'
-import { Main } from '../components/Main'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { Header } from "../components/Header";
+import { Main } from "../components/Main";
 
 const Home: NextPage = () => {
   return (
@@ -17,11 +17,8 @@ const Home: NextPage = () => {
         <Header />
         <Main />
       </div>
-
-
-
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
