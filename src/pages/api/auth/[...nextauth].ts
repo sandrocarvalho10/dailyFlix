@@ -75,10 +75,11 @@ export default NextAuth({
     //   clientSecret: process.env.FACEBOOK_SECRET,
     // }),
     GithubProvider({
+      // @ts-ignore
       clientId: process.env.GITHUB_ID,
+      // @ts-ignore
       clientSecret: process.env.GITHUB_SECRET,
       // https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps
-      // @ts-ignore
       scope: "read:user",
     }),
     // GoogleProvider({
